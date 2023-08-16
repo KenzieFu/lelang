@@ -17,12 +17,12 @@ class _HeaderState extends State<Header> {
             "Best Plants For Our Green House",
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
                   fontWeight: FontWeight.bold,
-                  fontSize: 32,
+                  fontSize: 26,
                 ),
           ),
         ),
         const SizedBox(
-          width: 10,
+          width: 80,
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -33,8 +33,8 @@ class _HeaderState extends State<Header> {
               child: Image.network(
                 'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif',
                 fit: BoxFit.fill,
-                height: 70.0,
-                width: 70.0,
+                height: 60.0,
+                width: 60.0,
               ),
             ),
           ),

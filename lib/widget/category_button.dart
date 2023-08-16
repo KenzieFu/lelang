@@ -10,7 +10,7 @@ class CateButton extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 13),
       width: 100,
-      height: 60,
+      height: 40,
       child: TextButton(
           style: ButtonStyle(
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
