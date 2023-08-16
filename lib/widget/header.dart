@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lelang/constant/routes.dart';
 
 class Header extends StatefulWidget {
   const Header({super.key});
@@ -27,7 +28,9 @@ class _HeaderState extends State<Header> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(storeRoute);
+            },
             icon: ClipRRect(
               borderRadius: BorderRadius.circular(30.0),
               child: Image.network(
