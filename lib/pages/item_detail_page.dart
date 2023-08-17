@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lelang/widget/detail_item.dart';
+import 'package:lelang/widget/list_bidders.dart';
 import 'package:lelang/widget/tab_bar.dart';
 
 class ItemDetail extends StatefulWidget {
@@ -132,7 +133,7 @@ class _ItemDetailState extends State<ItemDetail> {
                     const SizedBox(
                       height: 10,
                     ),
-                    const DetailItem(),
+                    const ListBidders()
                   ],
                 ),
               ),

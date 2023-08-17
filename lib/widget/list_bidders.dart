@@ -5,6 +5,32 @@ class ListBidders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Top Bidders",
+          style: Theme.of(context)
+              .textTheme
+              .titleMedium!
+              .copyWith(fontWeight: FontWeight.bold, fontSize: 21),
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 0),
+          height: 300,
+          child: MediaQuery.removePadding(
+            context: context,
+            removeTop: true,
+            child: ListView(
+              primary: false,
+              shrinkWrap: true,
+              children: const [
+                
+              ],
+            ),
+          ),
+        )
+      ],
+    );
   }
 }
