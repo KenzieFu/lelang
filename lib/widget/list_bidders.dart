@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lelang/widget/bidders.dart';
 
 class ListBidders extends StatelessWidget {
   const ListBidders({super.key});
@@ -23,9 +24,11 @@ class ListBidders extends StatelessWidget {
             removeTop: true,
             child: ListView(
               primary: false,
+              
               shrinkWrap: true,
               children: const [
-                
+                Bidders(),
+                Bidders(),
               ],
             ),
           ),

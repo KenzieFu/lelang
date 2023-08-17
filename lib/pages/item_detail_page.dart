@@ -11,6 +11,22 @@ class ItemDetail extends StatefulWidget {
 }
 
 class _ItemDetailState extends State<ItemDetail> {
+  final index = "details";
+
+  Widget currentWidget = const DetailItem();
+
+  void switchBar(String text) {
+    if (text == 'details') {
+      setState(() {
+        currentWidget = const DetailItem();
+      });
+    } else if (text == "bidders") {
+      setState(() {
+        currentWidget = const ListBidders();
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,19 +137,27 @@ class _ItemDetailState extends State<ItemDetail> {
                     const SizedBox(
                       height: 20,
                     ),
-                    const Row(
+                    Row(
                       children: [
-                        Text("Details"),
-                        SizedBox(
+                        TextButton(
+                            onPressed: () {
+                              switchBar("details");
+                            },
+                            child: const Text('Details')),
+                        const SizedBox(
                           width: 20,
                         ),
-                        Text("Bidders"),
+                        TextButton(
+                            onPressed: () {
+                              switchBar("bidders");
+                            },
+                            child: const Text('Bidders')),
                       ],
                     ),
                     const SizedBox(
                       height: 10,
                     ),
-                    const ListBidders()
+                    currentWidget,
                   ],
                 ),
               ),

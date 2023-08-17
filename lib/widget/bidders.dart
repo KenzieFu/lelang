@@ -5,8 +5,12 @@ class Bidders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Container(
-      child: const Row(),
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 10),
+      color: Colors.red,
+      child: const Row(
+        children: [Text("Hellop")],
+      ),
     );
   }
 }
