@@ -5,20 +5,51 @@ class SetBidBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Positioned(
-        bottom: 0,
-        left: 0,
-        right: 0,
-        child: Row(
-          children: [
-            Column(
-              children: [
-                Text("Current Highest Bid"),
-                Text('\$120.000'),
-              ],
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: const Color.fromARGB(255, 46, 49, 77)),
+        width: 310,
+        height: 90,
+        margin: const EdgeInsets.only(bottom: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text("Highest Bid",
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .copyWith(color: Colors.white)),
+              Text("\$120.000",
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .copyWith(color: Colors.white)),
+            ],
+          ),
+          TextButton(
+            onPressed: () {},
+            style: ButtonStyle(
+                shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10))),
+                padding: const MaterialStatePropertyAll(EdgeInsets.all(15)),
+                backgroundColor: MaterialStateProperty.all(
+                    const Color.fromARGB(255, 249, 240, 141))),
+            child: Text(
+              "Place a Bid",
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium!
+                  .copyWith(fontWeight: FontWeight.bold, fontSize: 21),
             ),
-            Column(),
-          ],
-        ));
+          )
+        ]),
+      ),
+    );
   }
 }

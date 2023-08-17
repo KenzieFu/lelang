@@ -21,7 +21,7 @@ class StoreItem extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: Image.network(
-            'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif',
+            'https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg',
             fit: BoxFit.fill,
             width: 100,
             height: 120,

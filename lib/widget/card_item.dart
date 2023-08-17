@@ -20,7 +20,7 @@ class CardItem extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image.network(
-                  'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif',
+                  'https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg',
                   fit: BoxFit.cover,
                   height: 200.0,
                   width: 200.0,
