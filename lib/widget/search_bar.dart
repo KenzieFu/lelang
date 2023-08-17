@@ -24,11 +24,10 @@ class _SearchItemState extends State<SearchItem> {
               decoration: const InputDecoration(
                   border: InputBorder.none,
                   prefixIcon: Icon(Icons.search),
-                  hintText: "Search Plants"),
+                  hintText: "Cari Barang"),
             ),
           ),
         ),
-        TextButton(onPressed: () {}, child: const Text("jshdkajhdaksS"))
       ],
     );
   }

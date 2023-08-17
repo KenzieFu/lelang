@@ -15,15 +15,15 @@ class _HeaderState extends State<Header> {
       children: [
         Flexible(
           child: Text(
-            "Best Plants For Our Green House",
+            "Lelang jauh lebih mudah dengan MIXA",
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
                   fontWeight: FontWeight.bold,
-                  fontSize: 26,
+                  fontSize: 24,
                 ),
           ),
         ),
         const SizedBox(
-          width: 80,
+          width: 40,
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
