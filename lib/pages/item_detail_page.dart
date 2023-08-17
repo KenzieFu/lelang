@@ -50,7 +50,7 @@ class _ItemDetailState extends State<ItemDetail> {
             Stack(
               children: [
                 Image.network(
-                    'https://images.pexels.com/videos/3045163/free-video-3045163.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+                    'https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/2019/07/01/2596012333.jpg',
                     height: 350,
                     fit: BoxFit.fill),
               ],
