@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:lelang/widget/detail_item.dart';
 import 'package:lelang/widget/tab_bar.dart';
 
-class ItemDetail extends StatelessWidget {
+class ItemDetail extends StatefulWidget {
   const ItemDetail({super.key});
 
+  @override
+  State<ItemDetail> createState() => _ItemDetailState();
+}
+
+class _ItemDetailState extends State<ItemDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,18 +47,20 @@ class ItemDetail extends StatelessWidget {
                   children: [
                     Align(
                       alignment: Alignment.centerLeft,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Cactus Aja",
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleLarge!
-                                .copyWith(fontWeight: FontWeight.bold),
-                          ),
-                          TextButton(onPressed: () {}, child: const Text("BID"))
-                        ],
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(vertical: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Cactus Aja",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleLarge!
+                                  .copyWith(fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -65,7 +73,13 @@ class ItemDetail extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text("Owner"),
+                            Text(
+                              "Owner",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium!
+                                  .copyWith(fontWeight: FontWeight.bold),
+                            ),
                             const SizedBox(
                               height: 10,
                             ),
@@ -87,14 +101,18 @@ class ItemDetail extends StatelessWidget {
                             )
                           ],
                         ),
-                        const Column(
+                        Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Berakhir dalam"),
-                            SizedBox(
+                            Text("Berakhir dalam",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium!
+                                    .copyWith(fontWeight: FontWeight.bold)),
+                            const SizedBox(
                               height: 10,
                             ),
-                            Text('01:52:22'),
+                            const Text('01:52:22'),
                           ],
                         ),
                       ],
@@ -110,7 +128,11 @@ class ItemDetail extends StatelessWidget {
                         ),
                         Text("Bidders"),
                       ],
-                    )
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const DetailItem(),
                   ],
                 ),
               ),

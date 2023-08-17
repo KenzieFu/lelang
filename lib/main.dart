@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lelang/constant/routes.dart';
 import 'package:lelang/pages/home_page.dart';
-import 'package:lelang/pages/item_detail.dart';
+import 'package:lelang/pages/item_detail_page.dart';
 import 'package:lelang/pages/store_page.dart';
 
 void main() {
