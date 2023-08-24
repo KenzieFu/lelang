@@ -1,33 +1,12 @@
+
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:lelang/pages/auction_item_setBid_page.dart';
-import 'package:lelang/widget/auction_item_list_of_bidders.dart';
-import 'package:lelang/widget/detail_item.dart';
+import 'package:lelang/widget/bidders.dart';
 
-import '../widget/tab_bar.dart';
-
-class ItemDetailPage extends StatefulWidget {
-  const ItemDetailPage({Key? key}) : super(key: key);
-
-  @override
-  State<ItemDetailPage> createState() => _ItemDetailPageState();
-}
-
-class _ItemDetailPageState extends State<ItemDetailPage> {
-  final index = "details";
-
-  Widget currentWidget = const DetailItem();
-
-  void switchBar(String text) {
-    if (text == 'details') {
-      setState(() {
-        currentWidget = const DetailItem();
-      });
-    } else if (text == "bidders") {
-      setState(() {
-        currentWidget = const AuctionItemListOfBiddersWidget();
-      });
-    }
-  }
+class SetBid extends StatelessWidget {
+  const SetBid({super.key});
+  static const routeName = "/auction-set-bid";
 
   @override
   Widget build(BuildContext context) {
@@ -141,37 +120,73 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                       const SizedBox(
                         height: 20,
                       ),
-                      Row(
-                        children: [
-                          TextButton(
-                              onPressed: () {
-                                switchBar("details");
-                              },
-                              child: const Text('Details')),
-                          const SizedBox(
-                            width: 20,
-                          ),
-                          TextButton(
-                              onPressed: () {
-                                switchBar("bidders");
-                              },
-                              child: const Text('Bidders')),
-                        ],
+                      Text(
+                        "Current Highest Bid",
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium!
+                            .copyWith(
+                                fontWeight: FontWeight.bold, fontSize: 21),
                       ),
+                      const Bidders(),
                       const SizedBox(
                         height: 10,
                       ),
-                      currentWidget,
+                      Container(
+                        margin: const EdgeInsets.symmetric(
+                            horizontal: 5, vertical: 5),
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Your Bid",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleSmall!
+                                    .copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20),
+                              ),
+                              Row(
+                                children: [
+                                  const Expanded(child: TextField()),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  TextButton(
+                                    onPressed: () {},
+                                    style: ButtonStyle(
+                                        shape: MaterialStatePropertyAll(
+                                            RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(10))),
+                                        padding: const MaterialStatePropertyAll(
+                                            EdgeInsets.all(15)),
+                                        backgroundColor:
+                                            MaterialStateProperty.all(
+                                                Colors.red)),
+                                    child: Text(
+                                      "Submit",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleMedium!
+                                          .copyWith(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 21,
+                                              color: Colors.white),
+                                    ),
+                                  )
+                                ],
+                              )
+                            ]),
+                      ),
                     ],
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 100,
-              )
             ]),
           ),
-          const SetBidBar(),
         ],
       ),
     );

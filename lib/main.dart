@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lelang/constant/routes.dart';
-import 'package:lelang/pages/home_page.dart';
+import 'package:lelang/pages/auction_item_setBid_page.dart';
+import 'package:lelang/pages/lelang_page.dart';
+import 'package:lelang/pages/initial_page.dart';
 import 'package:lelang/pages/item_detail_page.dart';
 import 'package:lelang/pages/store_page.dart';
 
@@ -16,16 +18,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       routes: {
-        homeRoute: (context) => const HomePage(),
+        /*  homeRoute: (context) => const HomePage(), */
+        lelangRoute: (context) => const LelangPage(),
         storeRoute: (context) => const StorePage(),
-        itemRoute: (context) => const ItemDetail(),
+        itemRoute: (context) => const ItemDetailPage(),
+        auctionSetBidRoute: (context) => const SetBid(),
       },
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: InitialScreen(),
     );
   }
 }

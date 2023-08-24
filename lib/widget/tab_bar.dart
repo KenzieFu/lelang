@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lelang/constant/routes.dart';
 
 class SetBidBar extends StatelessWidget {
   const SetBidBar({super.key});
@@ -33,7 +34,9 @@ class SetBidBar extends StatelessWidget {
             ],
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(auctionSetBidRoute);
+            },
             style: ButtonStyle(
                 shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10))),

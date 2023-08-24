@@ -44,11 +44,6 @@ class StoreItem extends StatelessWidget {
             // ignore: prefer_const_constructors
             Text("56 orang"),
             const Text("Sisa Waktu : 02:00:00"),
-            TextButton(
-                onPressed: () {},
-                child: const Text(
-                  "Bid",
-                )),
           ],
         )
       ]),

@@ -15,9 +15,7 @@ class StorePage extends StatelessWidget {
           "Store",
           textAlign: TextAlign.center,
         ),
-        actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.more_horiz))
-        ],
+        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.add))],
       ),
       body: ListView(
         padding: const EdgeInsets.all(12),

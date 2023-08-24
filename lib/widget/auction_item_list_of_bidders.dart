@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lelang/widget/bidders.dart';
 
-class ListBidders extends StatelessWidget {
-  const ListBidders({super.key});
+class AuctionItemListOfBiddersWidget extends StatelessWidget {
+  const AuctionItemListOfBiddersWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class ListBidders extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Top Bidders",
+          "Top Bidders (4)",
           style: Theme.of(context)
               .textTheme
               .titleMedium!
@@ -24,9 +24,12 @@ class ListBidders extends StatelessWidget {
             removeTop: true,
             child: ListView(
               primary: false,
-              
               shrinkWrap: true,
               children: const [
+                Bidders(
+                  id: 1,
+                ),
+                Bidders(),
                 Bidders(),
                 Bidders(),
               ],
