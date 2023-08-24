@@ -32,7 +32,7 @@ class BottomBarWidget extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.bookmark),
-          label: 'Bookmark',
+          label: 'MyBid',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.work_history_rounded),

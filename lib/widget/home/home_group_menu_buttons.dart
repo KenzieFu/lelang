@@ -66,7 +66,7 @@ class HomeGroupButtonsWidget extends StatelessWidget {
                     HomeMenuButtonWidget(
                       icon: Icons.money,
                       text: "Transaksi",
-                      route: storeRoute,
+                      route: transactionRoute,
                     ),
                     SizedBox(
                       width: 20,
