@@ -6,6 +6,7 @@ import 'package:lelang/pages/initial_page.dart';
 import 'package:lelang/pages/item_detail_page.dart';
 import 'package:lelang/pages/store_page.dart';
 import 'package:lelang/pages/transaction_page.dart';
+import 'package:lelang/pages/transaction_won_bid_detail_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
         storeRoute: (context) => const StorePage(),
         itemRoute: (context) => const ItemDetailPage(),
         auctionSetBidRoute: (context) => const SetBid(),
-        transactionRoute :(context)=>const TransactionPage(),
+        transactionRoute: (context) => const TransactionPage(),
+        transactionWonRoute: (context) => const TransactionWonBidDetailPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
