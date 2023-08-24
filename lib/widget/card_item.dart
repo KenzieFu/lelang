@@ -34,7 +34,7 @@ class CardItem extends StatelessWidget {
                       children: [
                         Text("Indoor"),
                         Text("Cactus Lily"),
-                        Text("Price"),
+                        Text("Initial Price"),
                         Text("\$30.00")
                       ],
                     ),
@@ -42,19 +42,6 @@ class CardItem extends StatelessWidget {
                   const SizedBox(
                     height: 100,
                   ),
-                  SizedBox(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          shape: const CircleBorder(),
-                          backgroundColor:
-                              const Color.fromARGB(255, 7, 205, 146)),
-                      child: const Icon(
-                        Icons.add,
-                        color: Colors.white,
-                      ),
-                    ),
-                  )
                 ],
               )
             ],

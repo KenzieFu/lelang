@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lelang/pages/home_page.dart';
 import 'package:lelang/pages/lelang_page.dart';
+import 'package:lelang/pages/ongoing_active_bid_list_page.dart';
 
 import '../widget/home/home_appbar_widget.dart';
 import '../widget/tab/main_bottom_bar_widget.dart';
@@ -18,7 +19,7 @@ class _InitialScreenState extends State<InitialScreen> {
   List mainScreens = [
     HomePage(),
     LelangPage(),
-    Container(),
+    OngoingActiveBidListPage(),
     Container(),
   ];
 

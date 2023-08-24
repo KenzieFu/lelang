@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
         auctionSetBidRoute: (context) => const SetBid(),
         transactionRoute: (context) => const TransactionPage(),
         transactionWonRoute: (context) => const TransactionWonBidDetailPage(),
+        
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,

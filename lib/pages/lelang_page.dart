@@ -23,13 +23,8 @@ class _LelangPageState extends State<LelangPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
-                height: 20,
-              ),
-              const Header(),
-              const SizedBox(
-                height: 10,
-              ),
+              /*   const Header(), */
+
               const SizedBox(
                 height: 30,
               ),

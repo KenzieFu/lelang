@@ -13,7 +13,15 @@ class TransactionWonBidDetailPage extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(10),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text(
+                "Deadline Pembayaran : 18:00:00",
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium!
+                    .copyWith(color: Colors.red),
+              ),
               Padding(
                 padding: const EdgeInsets.all(8),
                 child: Row(
@@ -109,6 +117,23 @@ class TransactionWonBidDetailPage extends StatelessWidget {
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text("""
+dasadsoaojfaa
+aosdawopdawopa
+aodwkoadpwad
+"""),
+              Container(
+                child: Row(
+                  children: [
+                    TextButton(
+                        onPressed: () {},
+                        child: const Text("Selesaikan Pembayaran")),
+                  ],
                 ),
               ),
             ],
