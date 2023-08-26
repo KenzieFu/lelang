@@ -6,3 +6,4 @@ const lelangRoute = '/lelang/';
 const transactionRoute = '/transaksi/';
 const transactionWonRoute = '/transaksi/won/';
 const ongoingBidsRoute = '/mybid/';
+const debtPageRoute = '/debt/';

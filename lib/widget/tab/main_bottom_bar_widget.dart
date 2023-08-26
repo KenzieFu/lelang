@@ -35,6 +35,10 @@ class BottomBarWidget extends StatelessWidget {
           label: 'MyBid',
         ),
         BottomNavigationBarItem(
+          icon: Icon(Icons.local_atm_rounded),
+          label: 'Loans',
+        ),
+        BottomNavigationBarItem(
           icon: Icon(Icons.work_history_rounded),
           label: 'Riwayat',
         ),

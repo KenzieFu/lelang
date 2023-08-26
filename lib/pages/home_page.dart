@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lelang/widget/card/card_item_ongoing_item_bid.dart';
 import 'package:lelang/widget/home/home_group_menu_buttons.dart';
+import 'package:lelang/widget/loans/loan_bar_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -67,6 +68,10 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ]),
+        const SizedBox(
+          height: 20,
+        ),
+        LoanBarWidget(),
         const SizedBox(
           height: 20,
         ),

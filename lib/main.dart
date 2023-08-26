@@ -4,6 +4,7 @@ import 'package:lelang/pages/auction_item_setBid_page.dart';
 import 'package:lelang/pages/lelang_page.dart';
 import 'package:lelang/pages/initial_page.dart';
 import 'package:lelang/pages/item_detail_page.dart';
+import 'package:lelang/pages/loans/debt_page.dart';
 import 'package:lelang/pages/store_page.dart';
 import 'package:lelang/pages/transaction_page.dart';
 import 'package:lelang/pages/transaction_won_bid_detail_page.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         auctionSetBidRoute: (context) => const SetBid(),
         transactionRoute: (context) => const TransactionPage(),
         transactionWonRoute: (context) => const TransactionWonBidDetailPage(),
-        
+        debtPageRoute: (context) => const DebtPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
